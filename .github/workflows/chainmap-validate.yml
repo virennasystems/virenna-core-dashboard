@@ -1,0 +1,27 @@
+name: Validate ChainMap
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'json/**'
+      - 'validate_chainmap.py'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || true
+
+      - name: Run ChainMap Validation
+        run: python validate_chainmap.py
