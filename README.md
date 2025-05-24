@@ -19,4 +19,4 @@ Dieses Repository enthält die zentrale Architektur des VIRENNA CEO-Dashboards s
 Dieses System soll die Integrität, Rückverfolgbarkeit und GPT-Fähigkeit des gesamten VIRENNA-Kernsystems gewährleisten – sowohl für interne Nutzung als auch zur externen Reflexion und Analyse.
 
 ## Lizenz
-Siehe LICENSE-Datei (MIT).
+Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
