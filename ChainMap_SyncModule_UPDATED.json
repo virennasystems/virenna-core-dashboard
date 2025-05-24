@@ -1,0 +1,32 @@
+{
+  "chains": [
+    {
+      "chain": "EXPORT_MODULE_PDF",
+      "description": "Exportiert aktuelle Reflexausgabe als PDF",
+      "path_trigger": "/html/VIRENNA_CEO_Dashboard_Siegel_Inline.html",
+      "output_format": "pdf",
+      "enabled_for": [
+        "ReflexEngine",
+        "Jake_Assistant"
+      ]
+    },
+    {
+      "chain": "AUDIT_SUMMARY_EXPORT",
+      "description": "Erstellt eine Zusammenfassung der letzten GPT-Zugriffe",
+      "path_trigger": "/logs/audit-gpt-access.json",
+      "output_format": "json",
+      "enabled_for": [
+        "Jake_Assistant"
+      ]
+    },
+    {
+      "chain": "EXPORT_HTML_ZIP_BUNDLE",
+      "description": "Exportiert das gesamte HTML-Verzeichnis als ZIP-Bundle für Download oder Archiv",
+      "path_trigger": "/html/",
+      "output_format": "zip",
+      "enabled_for": [
+        "Jake_Assistant"
+      ]
+    }
+  ]
+}
