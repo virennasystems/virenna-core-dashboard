@@ -9,7 +9,7 @@
     },
     {
       "chain": "AUDIT_SUMMARY_EXPORT",
-      "description": "Erstellt eine Zusammenfassung der letzten GPT-Zugriffe",
+      "description": "xyz (testlauf)",
       "path_trigger": "/logs/audit-gpt-access.json",
       "output_format": "json",
       "enabled_for": ["Jake_Assistant"]
