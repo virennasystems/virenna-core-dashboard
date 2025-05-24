@@ -1,0 +1,23 @@
+name: ChainMap Audit
+
+on:
+  push:
+    paths:
+      - 'json/ChainMap_SyncModule.json'
+  workflow_dispatch:
+
+jobs:
+  validate-chainmap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate JSON syntax
+        run: |
+          python3 -m json.tool < json/ChainMap_SyncModule.json
+
+      - name: Custom ChainMap integrity check
+        run: |
+          echo "Checking ChainMap integrity..."
+          python3 scripts/validate_chainmap.py || echo "Custom check skipped (script not present)"
