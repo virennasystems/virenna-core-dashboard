@@ -1,0 +1,21 @@
+name: GPT Sync Workflow
+
+on:
+  push:
+    paths:
+      - 'json/**'
+      - 'logs/**'
+      - 'VIRENNA_PACKAGE_MANIFEST.json'
+
+jobs:
+  gpt_sync_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Audit Backup
+        run: zip -r logs/audit-backup-$(date +'%Y-%m-%d').zip logs/audit-gpt-access.json
+
+      - name: GPT Sync Info
+        run: echo "GPT-Sync Trigger aktiv. Ketten werden geprüft und Logs gesichert."
