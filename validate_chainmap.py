@@ -1,4 +1,3 @@
-# .github/workflows/chainmap-validate.yml
 name: ChainMap Strukturvalidierung
 
 on:
