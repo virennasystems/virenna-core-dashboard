@@ -9,7 +9,7 @@
     },
     {
       "chain": "AUDIT_SUMMARY_EXPORT",
-      "description": "xyz (testlauf)",
+      "description": "xyz123 (testlauf)",
       "path_trigger": "/logs/audit-gpt-access.json",
       "output_format": "json",
       "enabled_for": ["Jake_Assistant"]
